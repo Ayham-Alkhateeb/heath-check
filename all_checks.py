@@ -16,7 +16,6 @@ def check_disk_full(disk, min_gb, min_percent):
     if percent_free < min_percent or gigabytes_free < min_gb:
         return True
     return False
-
 def main():
     if check_reboot():
         print("Pending reboot")
@@ -26,5 +25,4 @@ def main():
         sys.exit(1)
     print("everything is ok.")
     sys.exit(0)
-
 main()
